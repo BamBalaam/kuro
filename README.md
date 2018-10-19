@@ -1,11 +1,11 @@
 # Kuro
 
-Run https://github.com/ambv/black (Python code formatter) only on Git unstaged/untracked files
+Run [Black](https://github.com/ambv/black) (Python code formatter) only on Git unstaged/untracked files
 
 ## Requirements
 
 * Python 3.6 (f-strings!)
-* https://github.com/pallets/click
+* [Click](https://github.com/pallets/click)
 
 ## Usage
 
