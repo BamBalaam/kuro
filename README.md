@@ -8,11 +8,12 @@ Run [Black](https://github.com/ambv/black) (Python code formatter) only on Git u
 
 * Python 3.6 (f-strings!)
 * [Click](https://github.com/pallets/click)
+* [Black](https://github.com/ambv/black)
 
 ## Usage
 
 ```
-Usage: kuro.py [OPTIONS]
+Usage: kuro [OPTIONS]
 
 Options:
   --diff             Create a diff of the changes, in a 'kuro.diff' file. If
@@ -33,5 +34,3 @@ If no global or local options are set, Kuro will just run Black normally.
 
 * Validation of Black settings saved on `.kuro_config` file
 * Fix applying patch file (slightly broken at the moment)
-* Creating a `setup.py` file to actually install this tool locally
-* PIP? Maybe.

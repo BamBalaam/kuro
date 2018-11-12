@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kuro"
-version = "0.0.1"
+version = "0.0.3"
 description = "Run Black (Python code formatter) only on Git unstaged/untracked files"
 authors = ["André Madeira Cortes <amadeiracortes@gmail.com>"]
 license = "GPL-3.0"
@@ -13,6 +13,9 @@ black = "18.9b0"
 click = "7.*"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+kuro = "kuro:main"
 
 [build-system]
 requires = ["poetry>=0.12"]
