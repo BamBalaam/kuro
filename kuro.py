@@ -46,8 +46,9 @@ def main(
         click.echo("\nDone!")
         ctx.exit(0)
 
+    git_ls_command = "git ls-files --exclude-standard --modified --other *[.py]"
     git_ls_files = (
-        subprocess.check_output("git ls-files --modified --other *[.py]".split())
+        subprocess.check_output(git_ls_command.split())
         .decode("utf-8")
         .replace("\n", " ")
     )
