@@ -28,6 +28,11 @@ def main(
     ctx: click.Context, diff: bool, apply_diff: bool, project_options: bool
 ) -> None:
 
+    git_check_command = "git rev-parse --is-inside-work-tree"
+    if subprocess.check_output(git_check_command.split()).strip() != b"true":
+        click.echo("\nNot inside of a git repository")
+        ctx.exit(1)
+
     if project_options:
         create_kuro_config()
         ctx.exit(0)
