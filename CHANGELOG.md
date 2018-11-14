@@ -18,6 +18,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
     + Use [Black](https://github.com/ambv/black) on Python files only
     + Only files references by git-ls command
     + Capability to export a diff file of the changes Black outputs
-    + Capability 
+    + Capability to set project or global Black options
 
 [Unreleased]: https://github.com/BamBalaam/kuro/compare/0.0.3...master
