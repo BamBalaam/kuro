@@ -53,6 +53,10 @@ def main(
         .replace("\n", " ")
     )
 
+    if (len(git_ls_files)) == 0:
+        click.echo("\nNo files to change.")
+        ctx.exit(0)
+
     click.echo("\nApplying Black to the following files: \n" + git_ls_files)
 
     BLACK_OPTIONS = check_setup()
