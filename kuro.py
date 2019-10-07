@@ -1,6 +1,8 @@
 import click
+import importlib.util
 import os
 import subprocess
+import sys
 from typing import Union
 
 
@@ -121,4 +123,9 @@ def consume_diff() -> None:
 
 
 if __name__ == "__main__":
+    package_name = "black"
+    spec = importlib.util.find_spec(package_name)
+    if spec is None:
+        print(f"Warning! {package_name} is not installed")
+        sys.exit()
     main()
